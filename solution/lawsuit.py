@@ -23,7 +23,7 @@ def get_month_gap(df):
         return -1
 
 def lawsuit():
-    lawsuit = pd.read_csv('./public/7lawsuit.csv')
+    lawsuit = pd.read_csv('../public/7lawsuit.csv')
     output = pd.DataFrame()
     output["EID"] = lawsuit.groupby("EID").count().index
 

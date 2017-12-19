@@ -47,7 +47,7 @@ def after1978(x):
         return 0
 
 def entbase():
-    entbase = pd.read_csv('./public/1entbase.csv')
+    entbase = pd.read_csv('../public/1entbase.csv')
     entbase = entbase.fillna(0.0)
     entbase['EID_TRANS'] = entbase['EID'].apply(eid_trans)
     entbase['FIRST2ONEHOT'] = entbase["EID"].apply(first2onehot)

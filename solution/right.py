@@ -48,7 +48,7 @@ def first2onehot(x):
         return 5
 
 def right():
-    right = pd.read_csv('./public/5right.csv')
+    right = pd.read_csv('../public/5right.csv')
     output = pd.DataFrame()
     output["EID"] = right.groupby("EID").count().index
 

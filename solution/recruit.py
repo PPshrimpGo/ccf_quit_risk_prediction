@@ -31,7 +31,7 @@ def get_num(x):
     return 0
 
 def recruit():
-    recruit = pd.read_csv('./public/9recruit.csv')
+    recruit = pd.read_csv('../public/9recruit.csv')
     output = pd.DataFrame()
     output['EID'] = recruit.groupby("EID").count().index
 

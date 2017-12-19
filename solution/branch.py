@@ -4,7 +4,7 @@ import numpy as np
 from scipy.stats import pearsonr
 
 def branch():
-    branch = pd.read_csv('./public/3branch.csv')
+    branch = pd.read_csv('../public/3branch.csv')
     output = pd.DataFrame()
     output["EID"] = branch.groupby("EID").count().index
 

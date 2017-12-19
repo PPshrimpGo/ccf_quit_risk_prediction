@@ -2,7 +2,7 @@ import pandas as pd
 from utils import *
 
 def breakfaith():
-    breakfaith = pd.read_csv('./public/8breakfaith.csv')
+    breakfaith = pd.read_csv('../public/8breakfaith.csv')
     output = pd.DataFrame()
     output["EID"] = breakfaith.groupby("EID").count().index
 

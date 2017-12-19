@@ -19,7 +19,7 @@ from scipy.stats import spearmanr,pearsonr,skew,kurtosis,entropy
 
 
 def get_data():
-    train = pd.read_csv("./public/train.csv")
+    train = pd.read_csv("../public/train.csv")
 
     entbase_ = entbase()
     train = merge(train, entbase_)
@@ -117,7 +117,7 @@ def main():
     cols = [u for u in tr.columns if u not in ["TARGET", "ENDDATE"]]
     tr = tr[cols]
 
-    ts_ = pd.read_csv('./public/evaluation_public.csv')
+    ts_ = pd.read_csv('../public/evaluation_public.csv')
     ts = pd.merge(ts_, ts, how='inner', on='EID')
     ts = ts[cols]
 
@@ -125,6 +125,8 @@ def main():
     ts.fillna(-999, inplace=True)
 
     print(tr.shape)
+    for i in tr.columns:
+        print (i)
     # tr.to_csv("tr.csv", index=False)
     print(tr_y.shape)
     # tr_y.to_csv("tr_y.csv", index=False)

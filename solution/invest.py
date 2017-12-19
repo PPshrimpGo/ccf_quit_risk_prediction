@@ -2,7 +2,7 @@ from utils import *
 import pandas as pd
 
 def invest():
-    invest = pd.read_csv('./public/4invest.csv')
+    invest = pd.read_csv('../public/4invest.csv')
     output = pd.DataFrame()
     output["EID"] = invest.groupby("EID").count().index
 

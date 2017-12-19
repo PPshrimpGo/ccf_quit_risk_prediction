@@ -2,7 +2,7 @@ from utils import *
 import pandas as pd
 
 def project():
-    project = pd.read_csv('./public/6project.csv')
+    project = pd.read_csv('../public/6project.csv')
     output = pd.DataFrame()
     output["EID"] = project.groupby("EID").count().index
 

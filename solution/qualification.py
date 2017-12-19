@@ -12,7 +12,7 @@ def is_over(x):
         return 0
 
 def qualification():
-    qualification = pd.read_csv("./public/10qualification.csv", encoding="gbk")
+    qualification = pd.read_csv("../public/10qualification.csv", encoding="gbk")
     output = pd.DataFrame()
     output["EID"] = qualification.groupby("EID").count().index
 

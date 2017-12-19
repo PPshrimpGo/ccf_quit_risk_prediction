@@ -46,7 +46,7 @@ def clean(x):
     return x
 
 def alter():
-    alter = pd.read_csv('./public/2alter.csv')
+    alter = pd.read_csv('../public/2alter.csv')
     alter = alter.fillna(0)
     output = pd.DataFrame()
     output["EID"] = alter.groupby("EID").count().index
