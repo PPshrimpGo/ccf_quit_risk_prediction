@@ -69,7 +69,7 @@
 #### qualification
 - qualification_count
 
-### 时间特征
+#### 时间特征
 - first_invest_year_from_setup
 - last_invest_year_from_setup
 - first_right_year_from_setup
@@ -78,3 +78,23 @@
 - first_recruit_year_from_setup
 - mean_recruit_year_from_setup
 - first_alter_year_from_setup
+
+## 模型参数
+
+本方案采用了lightgbm作为机器学习模型，相关参数如下：
+
+```
+params = {
+        'boosting_type': 'gbdt',
+        'objective': 'binary',
+        'metric': {'auc'},
+        'num_leaves': 96,
+        'learning_rate': 0.008,
+        'feature_fraction': 0.75,
+        'bagging_fraction': 0.7,
+        'bagging_freq': 10,
+        'verbose': 0
+    }
+```
+
+本方案实现了一个简单的5折bagging，具体代码在models.py中。
