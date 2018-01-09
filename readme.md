@@ -1,6 +1,7 @@
 ### CCF企业经营退出风险预测 
 
 比赛链接：http://www.datafountain.cn/#/competitions/271/intro
+数据链接: https://pan.baidu.com/s/1oAh0dvG 密码：akge
 
 #### 赛题背景
 
